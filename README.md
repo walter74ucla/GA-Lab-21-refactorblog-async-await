@@ -13,7 +13,7 @@
     * The user then should be taken to a page where they can see that their edits were succesfully made in the DB.
     * > hint: If you need help with the logic, you can refer to yesterday's [lesson plan](https://git.generalassemb.ly/WebDev-Connected-Classroom/two-model-relationship-build/blob/master/README.md)
 
-3. Refactor the rest of your routes to use `async` and `await`.
+3.  Refactor the rest of your routes to use `async` and `await`.
 
 4.  Merge your branch back into your master branch after it is working.
 
@@ -48,6 +48,10 @@ app.get('/donuts', async (req, res, next) => {
 }
 ```
 
+**Task**: Edit your routes to use `next` for error handling, similar to the above example.
 
+---
+
+#### 7. **Write your own error handling code**.  
 
 Later, you could even come back and write your own error handling code that perhaps shows the user a nicer page, as most users probably shouldn't be seeing the stack traces and mongoose errors that you find so useful.  [Read this for more information about how](https://expressjs.com/en/guide/error-handling.html).
