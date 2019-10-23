@@ -17,12 +17,15 @@
 
 4.  Merge your branch back into your master branch after it is working.
 
+--- 
 
 ## Hungry for More?
 
 #### 5.  Run several asynchronous actions at the same time.
 
 Try to look up how to use `Promise.all()` with `await` to run several asynchronous actions concurrently. This is a nice technique if you need to do several asynchronous actions that don't depend on each other, and you don't want/need to wait for one to finish before you run the next.  [This stack overflow post](https://stackoverflow.com/questions/35612428/call-async-await-functions-in-parallel) may help.
+
+---
 
 #### 6. Understand the structure of an Express app at a deeper level.  And use `next`.
 
