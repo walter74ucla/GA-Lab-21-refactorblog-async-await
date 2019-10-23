@@ -39,7 +39,7 @@ One nice basic usage of `next` is, in your `try`-`catch` blocks, if you catch an
 
 Example:
 
-```
+```javascript
 // donut index route
 app.get('/donuts', async (req, res, next) => {
   try {
