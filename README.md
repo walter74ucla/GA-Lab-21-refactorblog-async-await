@@ -46,7 +46,8 @@ app.get('/donuts', async (req, res, next) => {
     const arrayOfDonuts = await Donut.find({});
   }
   catch (error) {
-    next(error) // PASS THE ERROR TO THE ERROR HANDLING FUNCTIONS BUILT INTO EXPRESS
+    next(error) // PASS THE ERROR TO THE ERROR HANDLING FUNCTIONS BUILT INTO EXPRESS.
+                // Let express handle the error for you.
   }
 }
 ```
