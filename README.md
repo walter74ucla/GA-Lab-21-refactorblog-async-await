@@ -33,7 +33,7 @@ Try to look up how to use `Promise.all()` with `await` to run several asynchrono
 
 Ponder this: "An Express application is essentially a series of middleware function calls."  Whoa.
 
-Each function can access the `request` (`req`) and `response` (`res`) objects, and typically either responds to the client or proceeds to the `next` function call in the series.  So all of the route handlers we've written (which also follow this pattern), could also be written to take an extra parameter `next`.  This callback refers to the next function that should be executed in the series of function calls.  
+Each function can access the `request` (`req`) and `response` (`res`) objects, and typically either responds to the client or proceeds to the `next` function call in the series.  So all of the route handlers we've written (which also follow this pattern), could also be written to take an optional extra parameter `next`.  This callback refers to the next function that should be executed in the series of function calls.  
 
 One nice basic usage of `next` is, in your `try`-`catch` blocks, if you catch an error that is thrown, instead of just `res.send()`ing the error to directly the user, you can pass it to the default error handling code that is built into express using `next()`. This is a sligtly more elegant way to handle errors because express's error handling code might be able to add some more useful information to the error messages than what you might otherwise see. See below for an example.
 
