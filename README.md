@@ -44,10 +44,11 @@ Example:
 app.get('/donuts', async (req, res, next) => {
   try {
     const arrayOfDonuts = await Donut.find({});
+    res.render('donuts/index.ejs', { donuts: arrayOfDonuts });
   }
   catch (error) {
-    next(error) // PASS THE ERROR TO THE ERROR HANDLING FUNCTIONS BUILT INTO EXPRESS.
-                // Let express handle the error for you.
+    next(error); // PASS THE ERROR TO THE ERROR HANDLING FUNCTIONS BUILT INTO EXPRESS.
+                 // (i.e. let express handle the error for you.)
   }
 }
 ```
